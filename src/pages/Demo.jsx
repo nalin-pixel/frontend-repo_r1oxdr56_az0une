@@ -1,16 +1,6 @@
 export default function Demo() {
-  const links = [
-    { label: 'Subscribe on YouTube', color: 'from-rose-500 to-fuchsia-600' },
-    { label: 'Follow on TikTok', color: 'from-fuchsia-600 to-purple-600' },
-    { label: 'Listen on Spotify', color: 'from-emerald-500 to-teal-600' },
-    { label: 'Shop digital presets', color: 'from-indigo-500 to-blue-600' },
-  ]
-
-  const gallery = [
-    'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1517817748490-58fdd6ea29dd?q=80&w=1200&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1517816428104-797678c7cf0d?q=80&w=1200&auto=format&fit=crop',
-  ]
+  const heroImage =
+    'https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?q=80&w=1600&auto=format&fit=crop';
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-white via-fuchsia-50 to-sky-50">
@@ -43,19 +33,6 @@ export default function Demo() {
                   tutorials on color and motion.
                 </p>
 
-                {/* Action links */}
-                <div className="mt-6 w-full space-y-3">
-                  {links.map((l) => (
-                    <a
-                      key={l.label}
-                      href="#"
-                      className={`block w-full rounded-xl bg-gradient-to-r ${l.color} text-white py-3.5 px-5 font-semibold shadow-lg hover:brightness-110 active:scale-[0.99] transition`}
-                    >
-                      {l.label}
-                    </a>
-                  ))}
-                </div>
-
                 {/* Stats */}
                 <div className="mt-6 grid grid-cols-3 gap-3 w-full">
                   <div className="rounded-xl bg-white border border-gray-200 p-3 shadow-sm">
@@ -72,28 +49,18 @@ export default function Demo() {
                   </div>
                 </div>
 
-                {/* Featured images */}
+                {/* Single featured image (AI-inspired portrait) */}
                 <div className="mt-8 w-full">
                   <div className="flex items-center justify-between mb-3">
                     <h2 className="text-sm font-semibold tracking-wide text-gray-700 uppercase">Featured</h2>
-                    <a href="#" className="text-xs text-fuchsia-700 hover:underline">View all</a>
                   </div>
-                  <div className="grid grid-cols-3 gap-3">
-                    {gallery.map((src, i) => (
-                      <a
-                        key={i}
-                        href="#"
-                        className="group relative block aspect-[4/5] overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm"
-                        aria-label={`Featured post ${i + 1}`}
-                      >
-                        <img
-                          src={src}
-                          alt={`Featured content ${i + 1}`}
-                          className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
-                        />
-                        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition"/>
-                      </a>
-                    ))}
+                  <div className="group relative block overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-md">
+                    <img
+                      src={heroImage}
+                      alt="AI‑inspired portrait"
+                      className="w-full h-[420px] object-cover transition duration-300 group-hover:scale-[1.02]"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent opacity-0 group-hover:opacity-100 transition" />
                   </div>
                 </div>
 
