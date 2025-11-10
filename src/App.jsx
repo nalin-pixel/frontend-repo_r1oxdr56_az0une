@@ -186,17 +186,7 @@ function App() {
           </div>
         </section>
 
-        {/* CTA */}
-        <section id="pricing" className="py-16">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
-            <h2 className="text-3xl font-bold">Build your link-in-bio in minutes.</h2>
-            <p className="text-gray-600 mt-2">Start free. Switch vibes anytime.</p>
-            <div className="mt-6 flex justify-center gap-3">
-              <a href="/signup" className="rounded-md bg-gray-900 text-white px-5 py-3 hover:bg-gray-800">Create your page</a>
-              <a href="/demo" className="rounded-md border border-gray-300 px-5 py-3 hover:border-gray-400">See a live demo</a>
-            </div>
-          </div>
-        </section>
+        {/* CTA removed as requested */}
       </main>
 
       <Footer />
