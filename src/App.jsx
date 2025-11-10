@@ -100,9 +100,17 @@ function App() {
                         { step: '3', title: 'Share everywhere', desc: 'Drop it in your bio on Instagram, TikTok, YouTube, and more.' },
                       ].map((s, i) => (
                         <div key={s.step} className="relative pl-16 pb-6">
-                          <div className="absolute left-0 top-0 h-10 w-10 grid place-items-center rounded-xl text-white font-bold shadow-lg "+
-                            (i === 0 ? 'bg-gradient-to-br from-fuchsia-500 to-purple-600' : i === 1 ? 'bg-gradient-to-br from-purple-600 to-indigo-600' : 'bg-gradient-to-br from-indigo-600 to-blue-600')
-                          }>
+                          <div
+                            className={
+                              `absolute left-0 top-0 h-10 w-10 grid place-items-center rounded-xl text-white font-bold shadow-lg ${
+                                i === 0
+                                  ? 'bg-gradient-to-br from-fuchsia-500 to-purple-600'
+                                  : i === 1
+                                  ? 'bg-gradient-to-br from-purple-600 to-indigo-600'
+                                  : 'bg-gradient-to-br from-indigo-600 to-blue-600'
+                              }`
+                            }
+                          >
                             {s.step}
                           </div>
                           <div className="rounded-2xl border border-gray-200 bg-white p-4 sm:p-5 shadow-sm">
