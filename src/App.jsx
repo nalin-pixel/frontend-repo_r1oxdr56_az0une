@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import ThemeToggle from './components/ThemeToggle'
+import TrustedCarousel from './components/TrustedCarousel'
 
 function App() {
   const [theme, setTheme] = useState({
@@ -42,7 +43,7 @@ function App() {
                 <span className={`hidden sm:inline-block text-xs font-medium bg-gradient-to-r ${theme.primary} text-transparent bg-clip-text`}>Pick a vibe</span>
               </div>
               <h1 className="text-4xl sm:text-5xl font-extrabold leading-tight tracking-tight">
-                Built for trusted creators. Ready to grow your audience.
+                Built for trusted creators. Monetization coming soon.
               </h1>
               <p className="mt-4 text-lg text-gray-600">Create your link‑in‑bio, showcase everything you do, and make it pop with youthful colors and motion.</p>
               <div className="mt-6 flex flex-wrap gap-3">
@@ -75,13 +76,10 @@ function App() {
 
         {/* Trust */}
         <section className="py-12 border-t border-gray-100 bg-gradient-to-b from-white to-gray-50">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
-            <p className="text-sm uppercase tracking-widest text-gray-500">Trusted by creators</p>
-            <div className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-6 text-gray-400">
-              <div className="h-8 bg-gray-200 rounded" />
-              <div className="h-8 bg-gray-200 rounded" />
-              <div className="h-8 bg-gray-200 rounded" />
-              <div className="h-8 bg-gray-200 rounded" />
+          <div className="max-w-6xl mx-auto px-4 sm:px-6">
+            <p className="text-sm uppercase tracking-widest text-gray-500 text-center">Trusted by creators</p>
+            <div className="mt-6">
+              <TrustedCarousel />
             </div>
           </div>
         </section>
@@ -97,7 +95,7 @@ function App() {
                 { title: 'Themes', desc: 'Pick a theme or fine‑tune colors, fonts, and backgrounds.' },
                 { title: 'Analytics', desc: 'See clicks and conversions on every link.' },
                 { title: 'Embeds', desc: 'YouTube, TikTok, Spotify, podcasts, and more.' },
-                { title: 'Monetization', desc: 'Sell digital files and accept tips directly.' },
+                { title: 'Monetization', desc: 'Coming soon — sell digital files and accept tips.' },
                 { title: 'Fast & SEO‑friendly', desc: 'Pages load fast and look great everywhere.' },
               ].map((f) => (
                 <div key={f.title} className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
@@ -191,11 +189,11 @@ function App() {
         {/* CTA */}
         <section id="pricing" className="py-16">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
-            <h2 className="text-3xl font-bold">Ready to grow your audience?</h2>
-            <p className="text-gray-600 mt-2">Start free. Upgrade anytime.</p>
+            <h2 className="text-3xl font-bold">Build your link-in-bio in minutes.</h2>
+            <p className="text-gray-600 mt-2">Start free. Switch vibes anytime.</p>
             <div className="mt-6 flex justify-center gap-3">
               <a href="/signup" className="rounded-md bg-gray-900 text-white px-5 py-3 hover:bg-gray-800">Create your page</a>
-              <a href="/login" className="rounded-md border border-gray-300 px-5 py-3 hover:border-gray-400">Log in</a>
+              <a href="/demo" className="rounded-md border border-gray-300 px-5 py-3 hover:border-gray-400">See a live demo</a>
             </div>
           </div>
         </section>
