@@ -12,6 +12,8 @@ function Navbar() {
           <nav className="hidden md:flex items-center gap-6 text-sm">
             <a href="#features" className="text-gray-600 hover:text-gray-900">Features</a>
             <a href="#how" className="text-gray-600 hover:text-gray-900">How it works</a>
+            <NavLink to="/demo" className={({ isActive }) => `hover:text-gray-900 ${isActive ? 'text-gray-900 font-semibold' : 'text-gray-600'}`}>Demo</NavLink>
+            <NavLink to="/terms" className={({ isActive }) => `hover:text-gray-900 ${isActive ? 'text-gray-900 font-semibold' : 'text-gray-600'}`}>Terms</NavLink>
           </nav>
           <div className="flex items-center gap-3">
             <NavLink to="/login" className="text-sm text-gray-700 hover:text-gray-900">Log in</NavLink>
