@@ -77,20 +77,73 @@ function App() {
           </div>
         </section>
 
-        {/* How it works */}
-        <section id="how" className="py-16 bg-gradient-to-b from-gray-50 to-white">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 grid md:grid-cols-3 gap-6">
-            {[
-              { step: '1', title: 'Sign up', desc: 'Create your free account in seconds.' },
-              { step: '2', title: 'Add links', desc: 'Drop in your links, socials, and products.' },
-              { step: '3', title: 'Share', desc: 'Put your page everywhere: Instagram, TikTok, YouTube, and more.' },
-            ].map((s) => (
-              <div key={s.step} className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
-                <div className="h-8 w-8 rounded-lg bg-gray-900 text-white grid place-items-center font-bold mb-3">{s.step}</div>
-                <h3 className="font-semibold">{s.title}</h3>
-                <p className="text-gray-600 text-sm mt-1">{s.desc}</p>
+        {/* How it works - revamped, colorful */}
+        <section id="how" className="relative py-20 overflow-hidden">
+          <div className="absolute -top-24 -left-24 h-72 w-72 bg-gradient-to-tr from-fuchsia-300 via-purple-300 to-blue-300 blur-3xl opacity-60 rounded-full" />
+          <div className="absolute -bottom-24 -right-24 h-72 w-72 bg-gradient-to-tr from-cyan-300 via-sky-300 to-indigo-300 blur-3xl opacity-60 rounded-full" />
+
+          <div className="max-w-6xl mx-auto px-4 sm:px-6">
+            <div className="rounded-3xl border border-transparent bg-gradient-to-br from-white/60 to-white/30 backdrop-blur-xl p-1">
+              <div className="rounded-3xl bg-white/80 p-8 sm:p-12">
+                <div className="grid md:grid-cols-2 gap-10 items-center">
+                  {/* Left: steps */}
+                  <div>
+                    <p className="text-sm font-semibold tracking-widest uppercase text-fuchsia-600">How it works</p>
+                    <h2 className="mt-2 text-3xl sm:text-4xl font-extrabold">Go live in 3 vibrant steps</h2>
+                    <p className="mt-3 text-gray-600">Create your profile, drop in your links, and share your page everywhere. It’s fast, fun, and looks stunning.</p>
+
+                    <div className="mt-8 relative">
+                      <div className="absolute left-5 top-6 bottom-6 w-0.5 bg-gradient-to-b from-fuchsia-500 via-purple-500 to-blue-500" />
+                      {[
+                        { step: '1', title: 'Sign up in seconds', desc: 'Create your free account and pick a unique handle.' },
+                        { step: '2', title: 'Add your content', desc: 'Links, socials, videos, products — customize the look and feel.' },
+                        { step: '3', title: 'Share everywhere', desc: 'Drop it in your bio on Instagram, TikTok, YouTube, and more.' },
+                      ].map((s, i) => (
+                        <div key={s.step} className="relative pl-16 pb-6">
+                          <div className="absolute left-0 top-0 h-10 w-10 grid place-items-center rounded-xl text-white font-bold shadow-lg "+
+                            (i === 0 ? 'bg-gradient-to-br from-fuchsia-500 to-purple-600' : i === 1 ? 'bg-gradient-to-br from-purple-600 to-indigo-600' : 'bg-gradient-to-br from-indigo-600 to-blue-600')
+                          }>
+                            {s.step}
+                          </div>
+                          <div className="rounded-2xl border border-gray-200 bg-white p-4 sm:p-5 shadow-sm">
+                            <h3 className="font-semibold">{s.title}</h3>
+                            <p className="text-gray-600 text-sm mt-1">{s.desc}</p>
+                            <div className="mt-3 flex gap-2">
+                              <span className="inline-flex items-center gap-1 text-xs text-fuchsia-600 bg-fuchsia-50 px-2 py-1 rounded-md">✨ Easy</span>
+                              <span className="inline-flex items-center gap-1 text-xs text-indigo-600 bg-indigo-50 px-2 py-1 rounded-md">🎨 Custom</span>
+                              {i === 2 && (
+                                <span className="inline-flex items-center gap-1 text-xs text-blue-600 bg-blue-50 px-2 py-1 rounded-md">🚀 Fast</span>
+                              )}
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+
+                    <div className="mt-6 flex flex-wrap gap-3">
+                      <a href="/signup" className="rounded-md bg-gray-900 text-white px-5 py-3 hover:bg-gray-800">Start free</a>
+                      <a href="/login" className="rounded-md border border-gray-300 px-5 py-3 hover:border-gray-400">I already have an account</a>
+                    </div>
+                  </div>
+
+                  {/* Right: colorful person/creator image with accents */}
+                  <div className="relative">
+                    <div className="absolute -inset-6 -z-10 bg-gradient-to-tr from-fuchsia-200 via-purple-200 to-blue-200 blur-3xl rounded-3xl" />
+                    <img
+                      src="https://images.unsplash.com/photo-1521310192545-4ac7951413f0?q=80&w=1200&auto=format&fit=crop"
+                      alt="Creator smiling with phone"
+                      className="w-full h-[420px] object-cover rounded-2xl shadow-2xl border border-white/60"
+                    />
+                    {/* Floating badges */}
+                    <div className="absolute -top-4 right-6 rounded-xl bg-white shadow-lg border border-gray-100 px-4 py-2 text-sm font-semibold">+3 new clicks</div>
+                    <div className="absolute bottom-6 -left-4 rounded-xl bg-white shadow-lg border border-gray-100 px-4 py-2 text-sm font-semibold flex items-center gap-2">
+                      <span className="h-2.5 w-2.5 rounded-full bg-emerald-500" /> Live
+                    </div>
+                    <div className="absolute top-6 -left-4 rounded-full bg-gradient-to-br from-fuchsia-500 to-purple-600 text-white text-xs px-3 py-1 shadow-lg">Creator</div>
+                  </div>
+                </div>
               </div>
-            ))}
+            </div>
           </div>
         </section>
 
