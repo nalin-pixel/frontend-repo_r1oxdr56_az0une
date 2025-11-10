@@ -7,6 +7,7 @@ import Contact from './pages/Contact'
 import Privacy from './pages/Privacy'
 import Terms from './pages/Terms'
 import { Login, Signup } from './pages/Auth'
+import Demo from './pages/Demo'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -19,6 +20,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/terms" element={<Terms />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/demo" element={<Demo />} />
         <Route path="/test" element={<Test />} />
       </Routes>
     </BrowserRouter>

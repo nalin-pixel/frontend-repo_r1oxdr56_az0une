@@ -43,4 +43,26 @@
     --tw-exit-translate-x: initial;
     --tw-exit-translate-y: initial;
   }
+
+  /* Youthful motion utilities */
+  @keyframes floatSlow {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0px); }
+  }
+  .animate-float-slow { animation: floatSlow 5s ease-in-out infinite; }
+
+  @keyframes blobSlow {
+    0% { transform: translate(0px, 0px) scale(1); }
+    33% { transform: translate(10px, -8px) scale(1.05); }
+    66% { transform: translate(-12px, 6px) scale(0.98); }
+    100% { transform: translate(0px, 0px) scale(1); }
+  }
+  .animate-blob-slow { animation: blobSlow 12s ease-in-out infinite; }
+
+  @keyframes pulseSoft {
+    0%, 100% { opacity: 1; }
+    50% { opacity: .7; }
+  }
+  .animate-pulse-soft { animation: pulseSoft 3s ease-in-out infinite; }
 }
