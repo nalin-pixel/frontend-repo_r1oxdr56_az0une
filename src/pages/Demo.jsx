@@ -1,5 +1,5 @@
 export default function Demo() {
-  const heroImage =
+  const replacementImage =
     'https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?q=80&w=1600&auto=format&fit=crop';
 
   return (
@@ -33,32 +33,13 @@ export default function Demo() {
                   tutorials on color and motion.
                 </p>
 
-                {/* Stats */}
-                <div className="mt-6 grid grid-cols-3 gap-3 w-full">
-                  <div className="rounded-xl bg-white border border-gray-200 p-3 shadow-sm">
-                    <div className="text-xs text-gray-500">Clicks</div>
-                    <div className="font-bold text-lg">1,204</div>
-                  </div>
-                  <div className="rounded-xl bg-white border border-gray-200 p-3 shadow-sm">
-                    <div className="text-xs text-gray-500">Views</div>
-                    <div className="font-bold text-lg">8,930</div>
-                  </div>
-                  <div className="rounded-xl bg-white border border-gray-200 p-3 shadow-sm">
-                    <div className="text-xs text-gray-500">Top</div>
-                    <div className="font-bold text-lg">YouTube</div>
-                  </div>
-                </div>
-
-                {/* Single featured image (AI-inspired portrait) */}
+                {/* Replaced cards/buttons with a single large image */}
                 <div className="mt-8 w-full">
-                  <div className="flex items-center justify-between mb-3">
-                    <h2 className="text-sm font-semibold tracking-wide text-gray-700 uppercase">Featured</h2>
-                  </div>
                   <div className="group relative block overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-md">
                     <img
-                      src={heroImage}
-                      alt="AI‑inspired portrait"
-                      className="w-full h-[420px] object-cover transition duration-300 group-hover:scale-[1.02]"
+                      src={replacementImage}
+                      alt="Featured showcase"
+                      className="w-full h-[460px] object-cover transition duration-300 group-hover:scale-[1.02]"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent opacity-0 group-hover:opacity-100 transition" />
                   </div>
