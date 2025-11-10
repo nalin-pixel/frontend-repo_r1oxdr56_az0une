@@ -43,7 +43,7 @@ function App() {
                 <span className={`hidden sm:inline-block text-xs font-medium bg-gradient-to-r ${theme.primary} text-transparent bg-clip-text`}>Pick a vibe</span>
               </div>
               <h1 className="text-4xl sm:text-5xl font-extrabold leading-tight tracking-tight">
-                Built for trusted creators. Monetization coming soon.
+                Built for trusted creators.
               </h1>
               <p className="mt-4 text-lg text-gray-600">Create your link‑in‑bio, showcase everything you do, and make it pop with youthful colors and motion.</p>
               <div className="mt-6 flex flex-wrap gap-3">
@@ -95,7 +95,6 @@ function App() {
                 { title: 'Themes', desc: 'Pick a theme or fine‑tune colors, fonts, and backgrounds.' },
                 { title: 'Analytics', desc: 'See clicks and conversions on every link.' },
                 { title: 'Embeds', desc: 'YouTube, TikTok, Spotify, podcasts, and more.' },
-                { title: 'Monetization', desc: 'Coming soon — sell digital files and accept tips.' },
                 { title: 'Fast & SEO‑friendly', desc: 'Pages load fast and look great everywhere.' },
               ].map((f) => (
                 <div key={f.title} className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
